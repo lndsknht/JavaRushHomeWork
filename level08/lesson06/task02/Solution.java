@@ -29,27 +29,30 @@ public class Solution
 
     public static void insert10000(List list)
     {
-        for (int i = 0; i < 10000; i++)
-        list.add("bl");
+        for (int i =0; i <10000; i++)
+        {
+            list.add("");
+        }
         //Напишите тут ваш код
 
     }
 
     public static void get10000(List list)
     {
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i < list.size(); i++)
         {
             list.get(i);
         }
+
         //Напишите тут ваш код
 
     }
 
     public static void set10000(List list)
     {
-        for (int i = 0; i < 10000; i++)
+        for (int i = 0; i <list.size(); i++)
         {
-            list.set(i, "pf");
+        list.set(i, "");
         }
         //Напишите тут ваш код
 
@@ -57,8 +60,11 @@ public class Solution
 
     public static void remove10000(List list)
     {
-        for (int j = 9999; j>=0; j--)
-        list.remove(j);
+        for (int i = 0; i <10000; i++)
+        {
+            list.remove(i);
+        }
+
         //Напишите тут ваш код
 
     }

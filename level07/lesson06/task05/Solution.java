@@ -15,20 +15,20 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        ArrayList<String> list = new ArrayList<String>();
+       ArrayList<String> list = new ArrayList<String>(); //Напишите тут ваш код
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
         for (int i = 0; i < 5; i++)
-        {
             list.add(reader.readLine());
-        }
 
-        for (int i =0; i < 13; i++)
+        for (int i = 0; i < 13; i++)
         {
-
+            String s = list.get(4);
+            list.add(0,s);
+            list.remove(5);
         }
 
-        //Напишите тут ваш код
-
+        for (int i = 0; i < list.size(); i++)
+            System.out.println(list.get(i));
     }
 }

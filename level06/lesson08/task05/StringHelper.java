@@ -12,11 +12,8 @@ public class StringHelper
 {
     public static String multiply(String s)
     {
-        String result = "";
 
-        for (int i = 0; i<5;i++)
-            result +=s;
-
+        String result = s;
         //Напишите тут ваш код
         return result;
     }
@@ -24,15 +21,7 @@ public class StringHelper
     public static String multiply(String s, int count)
     {
         String result = "";
-        for (int i = 0; i<count; i++)
-            result+=s;
-
         //Напишите тут ваш код
         return result;
-    }
-
-    public static void main (String[] args)
-    {
-
     }
 }

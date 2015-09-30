@@ -1,5 +1,7 @@
 package com.javarush.test.level06.lesson11.bonus02;
 
+import com.javarush.test.level05.lesson09.task02.Cat;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -33,40 +35,62 @@ public class Solution
     {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        String dedaName = reader.readLine();
+        Cat catDeda = new Cat(dedaName, null, null);
+
+        String babaName = reader.readLine();
+        Cat catBaba = new Cat(babaName, null, null);
+
+        String fatherName = reader.readLine();
+        Cat catFather = new Cat(fatherName, catDeda, null);
+
         String motherName = reader.readLine();
-        Cat catMother = new Cat(motherName);
+        Cat catMother = new Cat(motherName, null, catBaba);
+
+        String sonName = reader.readLine();
+        Cat catSon = new Cat(sonName, catFather, catMother);
 
         String daughterName = reader.readLine();
-        Cat catDaughter = new Cat(daughterName, catMother);
+        Cat catDaughter = new Cat(daughterName, catFather, catMother);
 
+
+        System.out.println(catDeda);
+        System.out.println(catBaba);
+        System.out.println(catFather);
         System.out.println(catMother);
-        System.out.println(catDaughter);
+        System.out.println(catSon);
+        System.out.print(catDaughter);
     }
 
     public static class Cat
     {
         private String name;
-        private Cat parent;
+        private Cat mama;
+        private Cat papa;
 
         Cat(String name)
         {
+
             this.name = name;
         }
 
-        Cat(String name, Cat parent)
+        Cat(String name, Cat papa, Cat mama)
         {
             this.name = name;
-            this.parent = parent;
+            this.papa = papa;
+            this.mama = mama;
+
         }
 
         @Override
         public String toString()
         {
-            if (parent == null)
-                return "Cat name is " + name + ", no mother ";
-            else
-                return "Cat name is " + name + ", mother is " + parent.name;
+            return "Cat name is " + name +","+
+                    ((mama!=null ? " mother is " + mama.name : " no mother") +
+                            (papa!=null ? ", father is " + papa.name : ", no father"));
+
         }
+
     }
 
 }

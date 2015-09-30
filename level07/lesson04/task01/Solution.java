@@ -3,6 +3,7 @@ package com.javarush.test.level07.lesson04.task01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.lang.reflect.Array;
 
 /* Максимальное среди массива на 20 чисел
 1. В методе initializeArray():
@@ -20,27 +21,27 @@ public class Solution
         System.out.println(max);
     }
     public static int[] initializeArray() throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int[] mas = new int[20];
+            int[] list = new int[20];
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        for (int i =0; i < 20; i++)
-        {
-            int z = Integer.parseInt(reader.readLine());
-            mas[i] = z;
-        }
+        for (int i = 0; i < list.length; i++)
+            list[i] = Integer.parseInt(reader.readLine());
+
         //initialize(create and fill) an array here - инициализируйте (создайте и заполните) массив тут
-        return mas;
+        return list;
     }
 
-    public static int max(int[] array) {
+    public static int max(int[] array)
+    {
 
-        int maxim = array[0];
+        int maxi = array[0];
         for (int x : array)
         {
-            if (x > maxim)
-                maxim = x;
+            if (maxi<x)
+                maxi = x;
         }
+
         //find the max value here - найдите максимальное значение в этом методе
-        return maxim;
+        return maxi;
     }
 }

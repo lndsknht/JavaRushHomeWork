@@ -1,5 +1,7 @@
 package com.javarush.test.level07.lesson09.task04;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 /* Буква «р» и буква «л»
@@ -23,19 +25,12 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
+        BufferedReader bis = new BufferedReader(new InputStreamReader(System.in));
 
         ArrayList<String> list = new ArrayList<String>();
         list.add("роза"); //0
         list.add("лира"); //1
         list.add("лоза"); //2
-        list.add("протазан"); //3
-        list.add("фазан"); //4
-        list.add("гизарма"); //5
-        list.add("луза"); //6
-        list.add("розмарин"); //7
-        list.add("пончик"); //7
-        list.add("синусоид"); //8
-
         list = fix(list);
 
         for (String s : list)
@@ -45,27 +40,9 @@ public class Solution
     }
 
     public static ArrayList<String> fix(ArrayList<String> list) {
-        ArrayList<String> listeg = new ArrayList<String>();
 
-        for (int i =0; i < list.size(); i++)
-        {
-            if ((list.get(i).contains("р")) && (list.get(i).contains("л")) )
-            {
-                listeg.add(list.get(i));
-            }
-            else if (list.get(i).contains("л") && !list.get(i).contains("р"))
-            {
-                listeg.add(list.get(i));
-                listeg.add(list.get(i));
-            }
-            else if (!list.get(i).contains("р") && !list.get(i).contains("л"))
-            {
-                listeg.add(list.get(i));
-            }
-
-        }
 
         //add your code here -  добавь код тут
-        return listeg;
+        return null;
     }
 }

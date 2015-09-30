@@ -13,35 +13,14 @@ import java.util.ArrayList;
 public class Solution
 {
     public static void main(String[] args) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<String> list = new ArrayList<String>();
-
-        for (int i = 0; i < 10; i++)
-        {
-            list.add(reader.readLine());
-        }
-
         //read strings and init ArrayList list here - считать строки с консоли и объявить ArrayList list тут
 
-        ArrayList<String> result = doubleValues(list);
 
-        for (int j = 0; j < result.size(); j++)
-        {
-            System.out.println(result.get(j));
-        }
         //print result - вывести на экран result
     }
 
     public static ArrayList<String> doubleValues(ArrayList<String> list) {
-        ArrayList<String> temp = new ArrayList<String>();
-
-        for (String x : list)
-        {
-            temp.add(x);
-            temp.add(x);
-        }
-
         // add your code here - добавь код тут
-        return temp;
+        return null;
     }
 }

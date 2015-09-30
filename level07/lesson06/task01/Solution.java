@@ -15,14 +15,14 @@ public class Solution
 {
     public static void main(String[] args) throws Exception
     {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         ArrayList<String> list = new ArrayList<String>();
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-       list.add("v");
-       list.add("ochered");
-       list.add("sukiny");
-       list.add("deti");
-       list.add("!");
+        for (int i = 0 ; i < 5; i++)
+        {
+            String s = reader.readLine();
+            list.add(s);
+        }
 
         System.out.println(list.size());
 
@@ -30,7 +30,6 @@ public class Solution
         {
             System.out.println(list.get(i));
         }
-
         //Напишите тут ваш код
 
     }
